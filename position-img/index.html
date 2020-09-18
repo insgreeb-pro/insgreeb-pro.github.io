@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Relative to image</h2>
+  <p>
+    Try to resize the container
+  </p>
+  Mouse position:
+  <div>
+    X:
+    <span id="x"></span>
+  </div>
+  <div>
+    Y:
+    <span id="y"></span>
+  </div>
+  <div class="container">
+    <div class="img-container">
+      <img id="img" src="image.png" alt="">
+      <button class="btn">&plus;</button>
+    </div>
+  </div>
+
+
+  <script>
+    document
+      .getElementById('img')
+      .addEventListener('mousemove', e => {
+        console.log(
+          e.layerX, e.layerY, e.target.offsetWidth, e.target.offsetHeight
+        )
+        document
+          .getElementById('x')
+          .innerText = Math.round(100 * e.layerX / e.target.offsetWidth) + "%"
+        document
+          .getElementById('y')
+          .innerText = Math.round(100 * e.layerY / e.target.offsetHeight) + "%"
+      })
+  </script>
+</body>
+
+</html>

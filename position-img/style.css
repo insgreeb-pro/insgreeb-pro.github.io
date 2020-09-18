@@ -1,0 +1,21 @@
+.container {
+  resize: both;
+  overflow: auto;
+  border: solid 3px green;
+  width: 80vw;
+}
+
+img {
+  width: 100%;
+}
+
+.img-container {
+  position: relative;
+  max-width: 95%;
+}
+
+.btn {
+  position: absolute;
+  left: 65%;
+  top: 14%;
+}
